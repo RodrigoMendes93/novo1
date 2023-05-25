@@ -6,19 +6,22 @@ class AddClickPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.red,
-      child: Center(
-        child: Column(
-          children: [
-            ElevatedButton(
-              //ao clique voltar para a página anterior  
-              onPressed: () => Navigator.of(context).pop(),
-              child: const Icon(Icons.arrow_back),
-            ),
-            const Text(AppConstants.newPage),
-        ],)
+    return Scaffold(
+      body: Container(
+        color: Colors.red,
+        child: Center(
+          child: Column(
+            children: [
+              ElevatedButton(
+                //ao clique voltar para a página anterior  
+                onPressed: () => Navigator.of(context).pop(),
+                child: const Icon(Icons.arrow_back),
+              ),
+              const Text(AppConstants.newPage),
+            ],
+          ),
         ),
-      );
+      ),
+    );
   }
 }
