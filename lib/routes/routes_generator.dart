@@ -4,7 +4,7 @@ import 'package:projeto1/pages/add_click.dart';
 import 'package:projeto1/shared/constants.dart';
 
 class RoutesGenerator {
-  static const homePage = '/home';
+  static const homePage = '/';
   static const addPage = '/clique/add';
 
   RoutesGenerator._();
