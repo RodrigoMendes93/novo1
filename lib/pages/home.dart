@@ -3,11 +3,11 @@ import 'package:projeto1/routes/routes_generator.dart';
 import 'package:projeto1/shared/constants.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required String title}) : _title = title;
+  const MyHomePage({super.key, required String userName}) 
+    : _userName = userName;
 
-  final String _title;
-
-  get name => _title;
+  final String _userName;
+  get name => _userName;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -29,13 +29,24 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Align(
             alignment: Alignment.topLeft,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text(AppConstants.clickNewpage),
-              ],
-            ))
+            child: Padding(
+              padding: const EdgeInsets.all(16.0), 
+                child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(AppConstants.welcome),
+                  Text(
+                    widget.name,
+                    style: const TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              )
+        ),      
         // child: Column(
         // mainAxisAlignment: MainAxisAlignment.center,
         // children: <Widget>[
@@ -49,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
         //  ),
         // ],
         //),
-        );
+      );
 
     // //floatingActionButton: FloatingActionButton(
     //onPressed: () {

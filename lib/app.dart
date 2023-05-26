@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var myHome = const MyHomePage(title: 'Flutter Demo Home Page');
+    var myHome = const MyHomePage(userName: 'Rodrigo Souza Mendes');
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo', //título
