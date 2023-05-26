@@ -30,8 +30,8 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Align(
             alignment: Alignment.topLeft,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
                 Text(AppConstants.clickNewpage),
               ],
