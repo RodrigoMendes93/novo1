@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:projeto1/components/subtitle_widget.dart';
 import 'package:projeto1/routes/routes_generator.dart';
 import 'package:projeto1/shared/constants.dart';
+import 'package:projeto1/shared/style.dart';
 
 import '../components/title_widget.dart';
 
@@ -19,6 +21,40 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: AppStyle.primaryColor,
+              ),
+              child: SizedBox.shrink(),
+            ),
+            ListTile(
+              leading: const Icon(Icons.home),
+              title: const Text('Home'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: const Icon(Icons.category),
+              title: const Text('Categorias'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: const Icon(Icons.calendar_month),
+              title: const Text('Calendário'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: const Icon(Icons.toc_outlined),
+              title: const Text('Sobre'),
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
+
       appBar: AppBar(
         leading: const Text("@"),
         backgroundColor: Theme.of(context).colorScheme.primary,
@@ -37,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(AppConstants.welcome),
+                const SubtitleDefault(title: AppConstants.welcome),
                 TitleDefault(title: widget.name),
               ],
             ),
