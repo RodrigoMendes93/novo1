@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:projeto1/routes/routes_generator.dart';
 import 'package:projeto1/shared/constants.dart';
 
+import '../components/title_widget.dart';
+
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required String userName}) 
-    : _userName = userName;
+  const MyHomePage({super.key, required String userName})
+      : _userName = userName;
 
   final String _userName;
   get name => _userName;
@@ -17,50 +19,43 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          leading: const Text("@"),
-          backgroundColor: Theme.of(context).colorScheme.primary,
-          title: Center(
-            child: Image.asset(
-              'lib/assets/images/logo.png',
-              width: 40,
-            ),
+      appBar: AppBar(
+        leading: const Text("@"),
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        title: Center(
+          child: Image.asset(
+            'lib/assets/images/logo.png',
+            width: 40,
           ),
         ),
-        body: Align(
-            alignment: Alignment.topLeft,
-            child: Padding(
-              padding: const EdgeInsets.all(16.0), 
-                child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(AppConstants.welcome),
-                  Text(
-                    widget.name,
-                    style: const TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                ),
-              )
-        ),      
-        // child: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        // children: <Widget>[
-        //  const Text('TEXT'),
-        //const Text(
-        //    'You have pushed the button this many times:',
-        //  ),
-        //  Text(
-        //    '$_counter',
-        //    style: Theme.of(context).textTheme.headlineMedium,
-        //  ),
-        // ],
-        //),
-      );
+      ),
+      body: Align(
+          alignment: Alignment.topLeft,
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(AppConstants.welcome),
+                TitleDefault(title: widget.name),
+              ],
+            ),
+          )),
+      // child: Column(
+      // mainAxisAlignment: MainAxisAlignment.center,
+      // children: <Widget>[
+      //  const Text('TEXT'),
+      //const Text(
+      //    'You have pushed the button this many times:',
+      //  ),
+      //  Text(
+      //    '$_counter',
+      //    style: Theme.of(context).textTheme.headlineMedium,
+      //  ),
+      // ],
+      //),
+    );
 
     // //floatingActionButton: FloatingActionButton(
     //onPressed: () {

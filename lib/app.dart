@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
             900: Colors.white,
           },
         ),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
       home: myHome,
       //Rota inicial
