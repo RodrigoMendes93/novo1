@@ -41,30 +41,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 TitleDefault(title: widget.name),
               ],
             ),
-          )),
-      // child: Column(
-      // mainAxisAlignment: MainAxisAlignment.center,
-      // children: <Widget>[
-      //  const Text('TEXT'),
-      //const Text(
-      //    'You have pushed the button this many times:',
-      //  ),
-      //  Text(
-      //    '$_counter',
-      //    style: Theme.of(context).textTheme.headlineMedium,
-      //  ),
-      // ],
-      //),
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+          //chamar a página de cadastro
+          Navigator.of(context).pushNamed(RoutesGenerator.addPage);
+          },
+          tooltip: 'Increment',
+          child: const Icon(Icons.add),
+        ),
     );
-
-    // //floatingActionButton: FloatingActionButton(
-    //onPressed: () {
-    //chamar a página de cadastro
-    // Navigator.of(context).pushNamed(RoutesGenerator.addPage);
-    //},
-    // tooltip: 'Increment',
-    //child: const Icon(Icons.add),
-    // ),
-    //);
   }
 }
