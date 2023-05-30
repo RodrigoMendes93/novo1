@@ -31,7 +31,6 @@ class MyApp extends StatelessWidget {
         ),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
-      home: myHome,
       //Rota inicial
       initialRoute: RoutesGenerator.homePage,
       // Função geradora de rota

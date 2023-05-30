@@ -56,7 +56,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       appBar: AppBar(
-        leading: const Text("@"),
         backgroundColor: Theme.of(context).colorScheme.primary,
         title: Center(
           child: Image.asset(
