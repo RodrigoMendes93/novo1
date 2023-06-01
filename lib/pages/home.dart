@@ -56,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: Theme.of(context).colorScheme.primary,
         title: Center(
           child: Image.asset(
@@ -68,9 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
           alignment: Alignment.topLeft,
           child: Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+            child: ListView(
               children: [
                 const SubtitleDefault(title: AppConstants.welcome),
                 TitleDefault(title: widget.name),
