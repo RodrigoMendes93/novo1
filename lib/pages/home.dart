@@ -3,8 +3,10 @@ import 'package:projeto1/components/subtitle_widget.dart';
 import 'package:projeto1/routes/routes_generator.dart';
 import 'package:projeto1/shared/constants.dart';
 import 'package:projeto1/shared/style.dart';
-
 import '../components/title_widget.dart';
+import '../controllers/home_controller.dart';
+import '../services/task_service.dart';
+import '../tasks/list.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required String userName})
@@ -54,7 +56,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Theme.of(context).colorScheme.primary,
@@ -66,25 +67,33 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: Align(
-          alignment: Alignment.topLeft,
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: ListView(
-              children: [
-                const SubtitleDefault(title: AppConstants.welcome),
-                TitleDefault(title: widget.name),
-              ],
-            ),
+        alignment: Alignment.topLeft,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SubtitleDefault(title: AppConstants.welcome),
+              TitleDefault(title: widget.name),
+              const Expanded(
+                child: Padding(
+                  padding: EdgeInsets.only(top:16.0),
+                  child: ListTasks(),
+                )
+              ),  
+            ],
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
           //chamar a página de cadastro
           Navigator.of(context).pushNamed(RoutesGenerator.addPage);
-          },
-          tooltip: 'Increment',
-          child: const Icon(Icons.add),
-        ),
+        },
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
