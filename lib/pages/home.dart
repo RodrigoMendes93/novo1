@@ -6,7 +6,7 @@ import 'package:projeto1/shared/style.dart';
 import '../components/title_widget.dart';
 import '../controllers/home_controller.dart';
 import '../services/task_service.dart';
-import '../tasks/list.dart';
+import '../components/tasks/list.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required String userName})

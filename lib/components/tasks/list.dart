@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../controllers/home_controller.dart';
-import '../services/task_service.dart';
+import '../../controllers/home_controller.dart';
+import '../../services/task_service.dart';
 
 class ListTasks extends StatefulWidget{
   const ListTasks({super.key});
