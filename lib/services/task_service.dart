@@ -1,6 +1,6 @@
 class TaskService{
    /// Class responsável por interagir com a fonte dos dados
-  getTasks(){
+  List<String> getTasks(){
     return List.generate(1000, (index) => 'Texto $index');
   }
 }
