@@ -4,6 +4,7 @@ import 'package:projeto1/components/title_widget.dart';
 import 'package:projeto1/shared/style.dart';
 import 'package:projeto1/shared/constants.dart';
 import '../../controllers/home_controller.dart';
+import '../../models/task_model.dart';
 import '../../services/task_service.dart';
 
 class ListTasks extends StatefulWidget {
@@ -42,6 +43,7 @@ class _ListTasksState extends State<ListTasks> {
             itemBuilder: (_, index) {
               return Row(
                 children: [
+                  //Círculo
                   Container(
                     width: 32,
                     height: 32,
@@ -50,11 +52,16 @@ class _ListTasksState extends State<ListTasks> {
                       shape: BoxShape.circle,
                     ),
                   ),
-                  Column(
-                    children: [
-                      TitleDefault(title: tasks[index].title),
-                      SubtitleDefault(title: tasks[index].description),
-                    ],
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 40.0),
+                      child: Column(
+                        children: [
+                          TitleDefault(title: tasks[index].title),
+                          SubtitleDefault(title: tasks[index].description),
+                        ],
+                      ),
+                    ),
                   ),
                   Checkbox(
                     side: const BorderSide(
@@ -62,8 +69,12 @@ class _ListTasksState extends State<ListTasks> {
                       width: 2,
                     ),
                     activeColor: AppStyle.primaryColor,
-                    value: false,
-                    onChanged: (_) {},
+                    value: tasks[index].finished,
+                    onChanged: (value) {
+                      setState(() {
+                        tasks[index] = tasks[index].copyWith(finished: value);
+                      });
+                    },
                   ),
                 ],
               );
