@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:projeto1/components/subtitle_widget.dart';
 import 'package:projeto1/components/title_widget.dart';
 import 'package:projeto1/shared/style.dart';
+import 'package:projeto1/shared/constants.dart';
 import '../../controllers/home_controller.dart';
 import '../../services/task_service.dart';
 
@@ -37,14 +38,15 @@ class _ListTasksState extends State<ListTasks> {
         const TitleDefault(title: AppConstants.nextTasks),
         Expanded(
           child: ListView.builder(
+            itemCount: tasks.length,
             itemBuilder: (_, index) {
               return Row(
                 children: [
                   Container(
                     width: 32,
                     height: 32,
-                    color: Color(tasks[index].category.color),
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
+                      color: Color(tasks[index].category.color),
                       shape: BoxShape.circle,
                     ),
                   ),
