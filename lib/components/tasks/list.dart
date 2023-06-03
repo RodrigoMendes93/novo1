@@ -24,7 +24,6 @@ void initState(){
   super.initState();
 }
 
-
 @override
 Widget build(BuildContext context){
   return ListView.builder(
