@@ -4,7 +4,6 @@ import 'package:projeto1/components/title_widget.dart';
 import 'package:projeto1/shared/style.dart';
 import 'package:projeto1/shared/constants.dart';
 import '../../controllers/home_controller.dart';
-import '../../models/task_model.dart';
 import '../../services/task_service.dart';
 
 class ListTasks extends StatefulWidget {
