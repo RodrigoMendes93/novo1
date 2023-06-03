@@ -3,20 +3,18 @@ import 'package:projeto1/shared/style.dart';
 
 class TextDefault extends StatelessWidget {
   final String _title;
-  final Color _color;
+  final Color color;
   final double? _fontSize;
-  final FontWeight? _fontWeight;
+  final FontWeight? fontWeight;
 
   const TextDefault({
     required String title,
-    required Color color,
+    required this.color,
     double? fontSize,
-    FontWeight? fontWeight,
+    this.fontWeight,
     super.key,
   })  : _title = title,
-        _fontSize = fontSize,
-        _color = color,
-        _fontWeight = fontWeight;
+        _fontSize = fontSize;
 
   @override
   Widget build(BuildContext context) {

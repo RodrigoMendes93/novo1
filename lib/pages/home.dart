@@ -4,8 +4,6 @@ import 'package:projeto1/routes/routes_generator.dart';
 import 'package:projeto1/shared/constants.dart';
 import 'package:projeto1/shared/style.dart';
 import '../components/title_widget.dart';
-import '../controllers/home_controller.dart';
-import '../services/task_service.dart';
 import '../components/tasks/list.dart';
 
 class MyHomePage extends StatefulWidget {

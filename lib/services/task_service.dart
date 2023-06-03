@@ -8,7 +8,7 @@ class TaskService {
       4, 
       (index) {
         final categorias = [
-          Category(name: 'Imposto', color: 0xFFFF0000),
+          Category(name: 'Imposto', color: 0xFFF45757),
           Category(name: 'Entrada', color: 0xFF5cc6ba),
           Category(name: 'Pagamento', color: 0xFF6680EC),
         ];
@@ -16,6 +16,7 @@ class TaskService {
         title: 'Texto $index',
         description: 'Falta ${index * 2} dias',
           category: categorias[index % categorias.length],
+          finished: index.isEven,
         );
       },
     );
