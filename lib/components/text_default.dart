@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projeto1/shared/style.dart';
+import 'package:projeto1/shared/styles.dart';
 
 class TextDefault extends StatelessWidget {
   final String _title;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projeto1/components/text_default.dart';
-import 'package:projeto1/shared/style.dart';
+import 'package:projeto1/shared/styles.dart';
 
 class SubtitleDefault extends StatelessWidget {
   final String _title;

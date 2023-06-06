@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:projeto1/components/image_header_default.dart';
 import 'package:projeto1/components/subtitle_widget.dart';
 import 'package:projeto1/routes/routes_generator.dart';
 import 'package:projeto1/shared/constants.dart';
-import 'package:projeto1/shared/style.dart';
+import 'package:projeto1/shared/styles.dart';
 import '../components/title_widget.dart';
 import '../components/tasks/list.dart';
 
@@ -28,6 +29,12 @@ class _MyHomePageState extends State<MyHomePage> {
             const DrawerHeader(
               decoration: BoxDecoration(
                 color: AppStyle.primaryColor,
+                image: DecorationImage(
+                  //Image: AssetImage
+                  image: NetworkImage('https://picsum.photos/seed/picsum/200/300',
+                  ),
+                  fit: BoxFit.cover,
+                ),
               ),
               child: SizedBox.shrink(),
             ),
@@ -57,12 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Theme.of(context).colorScheme.primary,
-        title: Center(
-          child: Image.asset(
-            'lib/assets/images/logo.png',
-            width: 40,
-          ),
-        ),
+        title: const ImageHeaderDefault(),
       ),
       body: Align(
         alignment: Alignment.topLeft,
@@ -79,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   padding: EdgeInsets.only(top:16.0),
                   child: ListTasks(),
                 )
-              ),  
+              ),
             ],
           ),
         ),

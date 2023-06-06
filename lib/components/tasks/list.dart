@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projeto1/components/subtitle_widget.dart';
 import 'package:projeto1/components/title_widget.dart';
-import 'package:projeto1/shared/style.dart';
+import 'package:projeto1/shared/styles.dart';
 import 'package:projeto1/shared/constants.dart';
 import '../../controllers/home_controller.dart';
 import '../../services/task_service.dart';
